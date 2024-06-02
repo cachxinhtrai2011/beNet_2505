@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MIT\\source\\repos\\BE_2505\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C887002B-7060-4B68-BFB3-5A6BC1CCC081}|BE_2505\\BE_2505.csproj|c:\\users\\mit\\source\\repos\\be_2505\\be_2505\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C887002B-7060-4B68-BFB3-5A6BC1CCC081}|BE_2505\\BE_2505.csproj|solutionrelative:be_2505\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MIT\\source\\repos\\BE_2505\\BE_2505\\Program.cs",
+              "RelativeDocumentMoniker": "BE_2505\\Program.cs",
+              "ToolTip": "C:\\Users\\MIT\\source\\repos\\BE_2505\\BE_2505\\Program.cs",
+              "RelativeToolTip": "BE_2505\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T08:32:36.807Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
