@@ -1,10 +1,14 @@
 ﻿using BE_2505.Buoi4.Bai23;
+using BE_2505.Buoi4.Bai24;
+using System.Text;
 // See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-Console.WriteLine("Xin chao Thuan");
+Console.OutputEncoding = Encoding.UTF8;
 
 Solution23 solution23 = new Solution23();
-solution23.GiaiBai23();
+Solution24 solution24 = new Solution24();
+
+//solution23.GiaiBai23();
+solution24.GiaiBai24();
 
 //int x = 5;
 //int y = x++; //y = 5
