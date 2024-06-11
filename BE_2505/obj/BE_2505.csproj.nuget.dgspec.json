@@ -1,23 +1,38 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MIT\\source\\repos\\BE_2505\\BE_2505\\BE_2505.csproj": {}
+    "D:\\OneDrive - NEWTIMES DEVELOPMENT LTD\\Desktop\\BE_2505\\beNet_2505\\BE_2505\\BE_2505.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MIT\\source\\repos\\BE_2505\\BE_2505\\BE_2505.csproj": {
+    "D:\\OneDrive - NEWTIMES DEVELOPMENT LTD\\Desktop\\BE_2505\\beNet_2505\\BE_2505.Common\\BE_2505.Common.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\OneDrive - NEWTIMES DEVELOPMENT LTD\\Desktop\\BE_2505\\beNet_2505\\BE_2505.Common\\BE_2505.Common.csproj",
+        "projectName": "BE_2505.Common",
+        "projectPath": "D:\\OneDrive - NEWTIMES DEVELOPMENT LTD\\Desktop\\BE_2505\\beNet_2505\\BE_2505.Common\\BE_2505.Common.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\OneDrive - NEWTIMES DEVELOPMENT LTD\\Desktop\\BE_2505\\beNet_2505\\BE_2505\\BE_2505.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MIT\\source\\repos\\BE_2505\\BE_2505\\BE_2505.csproj",
+        "projectUniqueName": "D:\\OneDrive - NEWTIMES DEVELOPMENT LTD\\Desktop\\BE_2505\\beNet_2505\\BE_2505\\BE_2505.csproj",
         "projectName": "BE_2505",
-        "projectPath": "C:\\Users\\MIT\\source\\repos\\BE_2505\\BE_2505\\BE_2505.csproj",
-        "packagesPath": "C:\\Users\\MIT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MIT\\source\\repos\\BE_2505\\BE_2505\\obj\\",
+        "projectPath": "D:\\OneDrive - NEWTIMES DEVELOPMENT LTD\\Desktop\\BE_2505\\beNet_2505\\BE_2505\\BE_2505.csproj",
+        "packagesPath": "C:\\Users\\Thommei Do\\.nuget\\packages\\",
+        "outputPath": "D:\\OneDrive - NEWTIMES DEVELOPMENT LTD\\Desktop\\BE_2505\\beNet_2505\\BE_2505\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\MIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Thommei Do\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,12 +42,17 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\Thommei Do\\source\\Workspaces\\D365\\EDI Program\\packages\\NTG_ClassLibrary": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\OneDrive - NEWTIMES DEVELOPMENT LTD\\Desktop\\BE_2505\\beNet_2505\\BE_2505.Common\\BE_2505.Common.csproj": {
+                "projectPath": "D:\\OneDrive - NEWTIMES DEVELOPMENT LTD\\Desktop\\BE_2505\\beNet_2505\\BE_2505.Common\\BE_2505.Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -49,6 +69,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.1.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -65,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

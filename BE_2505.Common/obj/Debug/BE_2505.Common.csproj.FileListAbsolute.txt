@@ -1,0 +1,6 @@
+D:\OneDrive - NEWTIMES DEVELOPMENT LTD\Desktop\BE_2505\beNet_2505\BE_2505.Common\bin\Debug\BE_2505.Common.dll
+D:\OneDrive - NEWTIMES DEVELOPMENT LTD\Desktop\BE_2505\beNet_2505\BE_2505.Common\bin\Debug\BE_2505.Common.pdb
+D:\OneDrive - NEWTIMES DEVELOPMENT LTD\Desktop\BE_2505\beNet_2505\BE_2505.Common\obj\Debug\BE_2505.Common.csproj.AssemblyReference.cache
+D:\OneDrive - NEWTIMES DEVELOPMENT LTD\Desktop\BE_2505\beNet_2505\BE_2505.Common\obj\Debug\BE_2505.Common.csproj.CoreCompileInputs.cache
+D:\OneDrive - NEWTIMES DEVELOPMENT LTD\Desktop\BE_2505\beNet_2505\BE_2505.Common\obj\Debug\BE_2505.Common.dll
+D:\OneDrive - NEWTIMES DEVELOPMENT LTD\Desktop\BE_2505\beNet_2505\BE_2505.Common\obj\Debug\BE_2505.Common.pdb

@@ -11,4 +11,8 @@
     <PackageReference Include="EPPlus" Version="7.1.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BE_2505.Common\BE_2505.Common.csproj" />
+  </ItemGroup>
+
 </Project>
