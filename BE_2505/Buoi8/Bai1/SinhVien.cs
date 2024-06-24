@@ -43,6 +43,11 @@ namespace BE_2505.Buoi8.Bai1
                 DiemLy = float.Parse(DiemLy_Temp);
                 DiemHoa = float.Parse(DiemHoa_Temp);
             }
+            else
+            {
+                Console.WriteLine(ReturnData.ResponseMessage);
+                System.Environment.Exit(1);
+            }
         }
         public void XuatThongTinSinhVien()
         {
