@@ -5,6 +5,7 @@ using BE_2505.Buoi6.Bai1;
 using BE_2505.Buoi6.Bai2;
 using BE_2505.Buoi7.Bai1;
 using BE_2505.Buoi7.Bai2;
+using BE_2505.Buoi8.Bai1;
 using System.Text;
 // See https://aka.ms/new-console-template for more information
 Console.OutputEncoding = Encoding.UTF8;
@@ -16,6 +17,7 @@ Solution1 solution1 = new Solution1();
 Solution2 solution2 = new Solution2();
 Buoi7_Solution_Bai1 buoi7_Solution_Bai1 = new Buoi7_Solution_Bai1();
 Buoi7_Solution_Bai2 buoi7_Solution_Bai2 = new Buoi7_Solution_Bai2();
+Buoi8_Solution_Bai1 buoi8_Solution_Bai1 = new Buoi8_Solution_Bai1();
 //solution23.GiaiBai23();
 //solution24.GiaiBai24();
 //solution25.GiaiBai25();
@@ -23,7 +25,9 @@ Buoi7_Solution_Bai2 buoi7_Solution_Bai2 = new Buoi7_Solution_Bai2();
 //solution2.GiaiBai2();
 
 //buoi7_Solution_Bai1.GiaiBai1();
-buoi7_Solution_Bai2.GiaiBai2();
+//buoi7_Solution_Bai2.GiaiBai2();
+
+buoi8_Solution_Bai1.GiaiBai1();
 //DateTime birthDate = new DateTime(2000, 8, 4);
 //DateTime currentDate = DateTime.Now;
 
