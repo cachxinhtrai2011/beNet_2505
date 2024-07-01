@@ -12,7 +12,7 @@ namespace BE_2505.Buoi10
         public void Menu()
         {
             List<NhanVien> nhanViens = new List<NhanVien>();
-            List<SanLuong> sanLuongs = new List<SanLuong>();
+            List<BaoCaoSanLuong> baoCaoSanLuongs = new List<BaoCaoSanLuong>();
             while (true)
             {
                 Console.Clear();
@@ -38,6 +38,7 @@ namespace BE_2505.Buoi10
                         break;
                     case 2:
                         SanLuong sanLuong = new SanLuong();
+                        BaoCaoSanLuong baoCaoSanLuong = new BaoCaoSanLuong();
                         Console.WriteLine("----\t\tChọn nhân viên cần thêm sản lượng theo công đoạn.");
                         for(int i = 0; i< nhanViens.Count; i++)
                         {
@@ -50,13 +51,14 @@ namespace BE_2505.Buoi10
                         var nhanVienSanLuong = nhanViens.Where(x => x.Id == luaChonNhanVienSanLuong).FirstOrDefault();
                         if(nhanVienSanLuong != null)
                         {
-                            sanLuong.nhanVien = nhanVienSanLuong;
+                            baoCaoSanLuong.nhanVien = nhanVienSanLuong;
+                            baoCaoSanLuong.sanLuongs.Add(sanLuong);
+                            baoCaoSanLuongs.Add(baoCaoSanLuong);
                         }
                         else
                         {
                             Console.WriteLine($"Không tìm thấy nhân viên có mã ID {luaChonNhanVienSanLuong}");
                         }
-                        sanLuongs.Add(sanLuong);
                         break;
                     case 3:
                         // Tạo file Excel và thêm dữ liệu
@@ -73,26 +75,42 @@ namespace BE_2505.Buoi10
                             worksheet.Cells[1, 5].Value = "Price";
                             worksheet.Cells[1, 6].Value = "Total";
 
-                            // Thêm dữ liệu
-                            for (int i = 0; i < sanLuongs.Count; i++)
-                            {
-                                if (string.IsNullOrEmpty(sanLuongs[i].nhanVien.Id.ToString()))
-                                    break;
-                                worksheet.Cells[i + 2, 1].Value = sanLuongs[i].nhanVien.Name;
-                                worksheet.Cells[i + 2, 2].Value = sanLuongs[i].MaCongDoan;
-                                worksheet.Cells[i + 2, 3].Value = sanLuongs[i].TenCongDoan;
-                                worksheet.Cells[i + 2, 4].Value = sanLuongs[i].SoLuongSanPham;
-                                worksheet.Cells[i + 2, 5].Value = sanLuongs[i].GiaSanPham;
-                                worksheet.Cells[i + 2, 6].Value = sanLuongs[i].TinhGiaSanPham();
-                            }
+                            worksheet.Cells[2, 3].Value = "Tổng";   
 
+                            // Thêm dữ liệu
+                            int index = 3;
+                            float TongSanLuong = 0;
+                            float TongThanhTien = 0;
+                            foreach (var danhSachSanLuongTheoNhanVien in baoCaoSanLuongs)
+                            {
+                                foreach (var danhSachSanLuong in danhSachSanLuongTheoNhanVien.sanLuongs)
+                                {
+                                    worksheet.Cells[index, 1].Value = danhSachSanLuongTheoNhanVien.nhanVien.Name;
+                                    worksheet.Cells[index, 2].Value = danhSachSanLuong.MaCongDoan;
+                                    worksheet.Cells[index, 3].Value = danhSachSanLuong.TenCongDoan;
+                                    worksheet.Cells[index, 4].Value = danhSachSanLuong.SoLuongSanPham;
+                                    worksheet.Cells[index, 5].Value = danhSachSanLuong.GiaSanPham;
+                                    worksheet.Cells[index, 6].Value = danhSachSanLuong.TinhGiaSanPham();
+                                    index++;
+                                }
+                                TongSanLuong += danhSachSanLuongTheoNhanVien.TinhTongTheoNhanVien();
+                                TongThanhTien += danhSachSanLuongTheoNhanVien.TinhTongThanhTien();
+                                worksheet.Cells[index, 4].Value = danhSachSanLuongTheoNhanVien.TinhTongTheoNhanVien();
+                                worksheet.Cells[index, 5].Value = 0;
+                                worksheet.Cells[index, 6].Value = danhSachSanLuongTheoNhanVien.TinhTongThanhTien();
+                                index++;
+                            }
+                            worksheet.Cells[2, 4].Value = TongSanLuong;
+                            worksheet.Cells[2, 6].Value = TongThanhTien;
                             // Lưu file Excel
-                            var filePath = @"C:\Users\MIT\Documents\temp\SinhVien.xlsx";
+                            var filePath = @"D:\OneDrive - NEWTIMES DEVELOPMENT LTD\Desktop\NhanVienTheoSanLuong.xlsx";
                             FileInfo fi = new FileInfo(filePath);
                             package.SaveAs(fi);
 
                             Console.WriteLine($"Excel file has been saved to {filePath}");
                         }
+                        break;
+                    default:
                         break;
                 }
             }

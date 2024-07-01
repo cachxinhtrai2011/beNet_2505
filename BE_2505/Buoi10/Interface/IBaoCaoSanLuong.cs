@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace BE_2505.Buoi10.Interface
 {
-    public interface ISanLuong
+    public interface IBaoCaoSanLuong
     {
-        public void NhapSanLuong();
-        public void XuatSanLuong();
-        public float TinhGiaSanPham();
+        float TinhTongTheoNhanVien();
+        float TinhTongThanhTien();
     }
 }
