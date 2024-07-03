@@ -1,0 +1,46 @@
+--Câu 2. Tạo bảng
+CREATE TABLE SinhVien (
+    MaSinhVien INT PRIMARY KEY,
+    HoTen NVARCHAR(50),
+    NgaySinh DATE,
+    GioiTinh NVARCHAR(10)
+);
+
+CREATE TABLE LopHoc (
+    MaLopHoc INT PRIMARY KEY,
+    TenLopHoc NVARCHAR(50)
+);
+
+CREATE TABLE SinhVien_Lop (
+    MaSinhVien INT,
+    MaLopHoc INT,
+    PRIMARY KEY (MaSinhVien, MaLopHoc),
+    FOREIGN KEY (MaSinhVien) REFERENCES SinhVien(MaSinhVien),
+    FOREIGN KEY (MaLopHoc) REFERENCES LopHoc(MaLopHoc)
+);
+
+--Câu 3. Insert dữ liệu
+-- Thêm dữ liệu vào bảng SinhVien
+INSERT INTO SinhVien (MaSinhVien, HoTen, NgaySinh, GioiTinh)
+VALUES (1, 'Nguyen Van A', '2000-01-01', 'Nam'),
+       (2, 'Tran Thi B', '2001-02-02', 'Nu');
+
+-- Thêm dữ liệu vào bảng LopHoc
+INSERT INTO LopHoc (MaLopHoc, TenLopHoc)
+VALUES (101, 'Toan Cao Cap'),
+       (102, 'Lap Trinh Co Ban');
+
+-- Thêm dữ liệu vào bảng SinhVien_Lop
+INSERT INTO SinhVien_Lop (MaSinhVien, MaLopHoc)
+VALUES (1, 101),
+       (1, 102),
+       (2, 102);
+
+--Câu 4. Sử Dụng Câu Lệnh SELECT để lấy thông tin sv
+SELECT * FROM SinhVien WHERE MaSinhVien = 1;
+
+--Câu 5. Sử Dụng Câu Lệnh SELECT Lấy danh sách lớp học của một sinh viên
+SELECT LopHoc.MaLopHoc, LopHoc.TenLopHoc
+FROM LopHoc
+JOIN SinhVien_Lop ON LopHoc.MaLopHoc = SinhVien_Lop.MaLopHoc
+WHERE SinhVien_Lop.MaSinhVien = 1;
