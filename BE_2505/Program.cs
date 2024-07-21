@@ -1,4 +1,5 @@
-﻿using BE_2505.Buoi4.Bai23;
+﻿using BE_2505.Buoi13;
+using BE_2505.Buoi4.Bai23;
 using BE_2505.Buoi4.Bai24;
 using BE_2505.Buoi5.Bai25;
 using BE_2505.Buoi6.Bai1;
@@ -18,6 +19,8 @@ Solution2 solution2 = new Solution2();
 Buoi7_Solution_Bai1 buoi7_Solution_Bai1 = new Buoi7_Solution_Bai1();
 Buoi7_Solution_Bai2 buoi7_Solution_Bai2 = new Buoi7_Solution_Bai2();
 Buoi8_Solution_Bai1 buoi8_Solution_Bai1 = new Buoi8_Solution_Bai1();
+Computer computer = new Computer();
+computer.Menu();
 //solution23.GiaiBai23();
 //solution24.GiaiBai24();
 //solution25.GiaiBai25();
@@ -27,7 +30,7 @@ Buoi8_Solution_Bai1 buoi8_Solution_Bai1 = new Buoi8_Solution_Bai1();
 //buoi7_Solution_Bai1.GiaiBai1();
 //buoi7_Solution_Bai2.GiaiBai2();
 
-buoi8_Solution_Bai1.GiaiBai1();
+//buoi8_Solution_Bai1.GiaiBai1();
 //DateTime birthDate = new DateTime(2000, 8, 4);
 //DateTime currentDate = DateTime.Now;
 

@@ -6,3 +6,6 @@
 *.vsidx
 /BE_2505/bin/Debug/net8.0/runtimes/win/lib
 /.gitignore
+/BE2505.DataAccess/bin/Debug
+/BE2505.DataAccess/obj/Debug
+/BE2505.DataAccess/Properties
