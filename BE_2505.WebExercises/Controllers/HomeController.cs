@@ -12,6 +12,7 @@ namespace BE_2505.WebExercises.Controllers
     public class HomeController : Controller
     {
         ProductManager productManager = new ProductManager();
+        SignInManager   signInManager = new SignInManager();    
         public ActionResult Index()
         {
             var productList = productManager.GetListProduct();
@@ -93,6 +94,33 @@ namespace BE_2505.WebExercises.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+        public ActionResult SignIn()
+        {
+            ViewBag.Message = "Sign In nè";
+
+            return View();
+        }
+        [HttpPost]
+        public JsonResult SignIn(string userName, string passWord)
+        {
+            ReturnData returnDataSignIn = new ReturnData();
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    returnDataSignIn = signInManager.SignIn(userName, passWord);
+                    if (returnDataSignIn.ResponseCode == 1)
+                    {
+                        return Json(new { success = true, message = returnDataSignIn.ResponseMessage });
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = returnDataSignIn.ResponseMessage });
+            }
+            return Json(new { success = false, message = returnDataSignIn.ResponseMessage });
         }
     }
 }
